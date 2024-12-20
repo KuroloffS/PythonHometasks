@@ -25,19 +25,15 @@ def median(values):
     else:  # Odd number of elements
         return sorted_values[mid]
 
-# Calculate enrollment statistics
 students, tuition_fees = enrollment_stats(universities)
-
-# Total values
 total_students = sum(students)
 total_tuition = sum(tuition_fees)
-
-# Mean and median values
 student_mean = mean(students)
 student_median = median(students)
-
 tuition_mean = mean(tuition_fees)
 tuition_median = median(tuition_fees)
+
+print("******************************")
 print(f"Total students: {total_students:,}")
 print(f"Total tuition: $ {total_tuition:,}")
 print()
@@ -46,3 +42,4 @@ print(f"Student median: {student_median:,}")
 print()
 print(f"Tuition mean: $ {tuition_mean:,.2f}")
 print(f"Tuition median: $ {tuition_median:,}")
+print("******************************")
