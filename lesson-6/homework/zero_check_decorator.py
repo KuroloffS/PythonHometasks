@@ -1,14 +1,15 @@
 def check(func):
-  def wrapper(*args, **kwargs):
-    reminder = func(*args, **kwargs)
-    return reminder 
-  return wrapper
+  def wrapper(*args, **wargs):
+    a, b = args
+    if b == 0:
+      return "Denominator can't be zero"
+    else:
+      return func(*args, **wargs)
+  return wrapper      
+
 @check
 def div(a, b):
-  if b == 0 :
-    print("Denominator can't be zero")
-  else :
-    return a / b
+  return a / b
 
-result = div(6, 0)
-print(result)
+print(div(6, 0))
+
