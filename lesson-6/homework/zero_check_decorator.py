@@ -1,15 +1,15 @@
 def check(func):
   def wrapper(*args, **wargs):
     a, b = args
-    if b == 0:
-      return "Denominator can't be zero"
-    else:
-      return func(*args, **wargs)
+    try:
+      return a / b
+    except ZeroDivisionError:
+      return "Cant divide to zero"
   return wrapper      
 
 @check
 def div(a, b):
   return a / b
 
-print(div(6, 0))
+print(div(6, 4))
 
