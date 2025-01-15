@@ -1,3 +1,6 @@
-thisset = {"apple", "banana", "cherry", "apple"}
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
 
-print(thisset)
+set1.difference_update(set2)
+
+print(set1)
